@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top_area">
+            <div id="logo">
+                N6T Technology
+            </div>
+            <div class = "heading">
+                 Book Your Offline Appointment Now !!
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="background_of_page">
+            <img src="images/backgrounds_and_others/background-booking_page.png" class = bg_image>
+        </div>
+        <div class="template">
+             <div class="form_submission">
+            <div class="form_booking_appointment">
+                <h1 id ="heading_3">Your Details</h1>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="age">Age:</label>
+                         <input type="number" id="age" name="age" required>
+
+                         <label for="sex">Sex:</label>
+                         <select id="sex" name="sex" required>
+    <option value="">Select</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <!-- Doctor Dropdown -->
+  <label for="doctor">Select Doctor:</label>
+  <select id="doctor" name="doctor" required>
+    <option value="">Select Doctor</option>
+    <option value="dr_singh">Dr. A. K. Singh (Cardiologist)</option>
+    <option value="dr_verma">Dr. S. Verma (Dermatologist)</option>
+    <option value="dr_khan">Dr. R. Khan (Opthalmologist)</option>
+    <option value="dr_mehra">Dr. P. Mehra (Orthopedic)</option>
+    <option value="dr_jangir">Dr. Hemant (Pedatrician)</option>
+  </select>
+
+  <label for="mobile">Mobile Number:</label>
+  <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="issue">Description of Issue:</label>
+  <textarea id="issue" name="issue" required></textarea>
+
+  <input type="submit" value="Submit">
+ </form>
+                
+
+         </div>
+        </div>
+        </div>
+        
+    
+    </main>
+<script src="script.js"></script>
+</body>
+</html>

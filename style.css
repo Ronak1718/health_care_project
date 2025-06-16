@@ -236,3 +236,77 @@ input::placeholder{
     background-color: #1fecdf;
     color: blue;
 }
+
+#dark_toggle input[type="checkbox"] {
+  display: none; 
+}
+
+#dark_toggle label {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background-color: #444;
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#dark_toggle label:hover {
+  background-color: #666;
+}
+#dark_toggle input[type="checkbox"] {
+  display: none; 
+}
+#dark_toggle label {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  padding: 8px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#dark_toggle label:hover {
+  background-color: #666;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+body.dark .quick_nav_bar {
+  background-color: #1a1a1a;
+}
+body.dark #search_bar,
+body.dark #my_appointments,
+body.dark #input_bar {
+  border-color: #ccc;
+  background-color: #222;
+  color: #fff;
+}
+body.dark #input_bar::placeholder {
+  color: #aaa;
+}
+body.dark .buttons {
+  border-color: #aaa;
+}
+body.dark .buttons:hover {
+  background-color: #fff;
+  color: rgb(25, 110, 37);
+}
+body.dark #logo {
+  border-color: #fff;
+}
+body.dark .booking_buttons{
+    background-color: green;
+}
+body.dark .booking_buttons:hover{
+    background-color: rgb(2, 163, 163);
+}
