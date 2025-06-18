@@ -2,7 +2,6 @@ function generatePDF() {
   const element = document.querySelector('.form_booking_appointment');
   html2pdf().from(element).save('Appointment-Details.pdf');
 }
-
 const form = document.querySelector('form');
 
 form?.addEventListener("submit", function (e) {
@@ -16,7 +15,7 @@ form?.addEventListener("submit", function (e) {
     name: document.getElementById("name").value,
     age: document.getElementById("age").value,
     sex: document.getElementById("sex").value,
-    doctor: document.getElementById("doctor").value,
+    issue: document.getElementById("issue").value,
     mobile: document.getElementById("mobile").value,
     email: document.getElementById("email").value,
     description: document.querySelector("textarea[name='issue']").value,

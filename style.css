@@ -94,6 +94,39 @@ button{
     background-color: white;
     color: rgb(0, 176, 152);
 }
+.appointment_box{
+    height: 500px;
+    width: 400px ;
+    background-color:rgba(155, 155, 155,0.4);
+    border:0.25px solid white;
+    margin-right: 80px;
+    margin-top: 10px;
+    position: absolute;
+    top:72px;
+    right:90px;
+    border-radius:8px;
+    backdrop-filter: blur(4px);
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    overflow: auto;
+}
+.appointment_box::-webkit-scrollbar{
+    background: none;
+    color: white;
+}
+.summaryAppointment{
+    display: grid;
+    grid-template-rows: repeat(50px);
+    margin-top: 30px;
+    cursor: pointer;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+.heading_appointment_container{
+    color: white;
+    text-align: center;
+}
 #notification_bell{
     height: 70%;
     width: 100%;
@@ -309,4 +342,14 @@ body.dark .booking_buttons{
 }
 body.dark .booking_buttons:hover{
     background-color: rgb(2, 163, 163);
+}
+#clearAppointment{
+    width: 100%;
+    border:1px solid white;
+    outline: none;
+    background-color: none;
+}
+#clearAppointment:hover{
+    background-color: red;
+    color:white;
 }

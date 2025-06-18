@@ -48,7 +48,7 @@
     <option value="dr_verma">Dr. S. Verma (Dermatologist)</option>
     <option value="dr_khan">Dr. R. Khan (Opthalmologist)</option>
     <option value="dr_mehra">Dr. P. Mehra (Orthopedic)</option>
-    <option value="dr_jangir">Dr. Hemant (Pedatrician)</option>
+    <option value="dr_jangir">Dr. Hemant (Pedaetrician)</option>
   </select>
 
   <label for="mobile">Mobile Number:</label>
@@ -61,15 +61,16 @@
   <textarea id="issue" name="issue" required></textarea>
 
   <input type="submit" value="Submit">
+  <button type="button" onclick="generatePDF()"  class ="pdf_Download">Download as PDF</button>
  </form>
                 
 
          </div>
         </div>
-        </div>
         
-    
+    </div>
     </main>
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </body>
 </html>
