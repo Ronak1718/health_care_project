@@ -110,6 +110,25 @@ button{
     color: white;
     text-align: center;
     overflow: auto;
+    animation: drop 500ms ease 1 forwards;
+}
+.updates-js-window{
+    height: 500px;
+    width: 200px ;
+    background-color:rgba(155, 155, 155,0.4);
+    border:0.25px solid white;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: absolute;
+    top:72px;
+    right:10px;
+    border-radius:8px;
+    backdrop-filter: blur(4px);
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    overflow: auto;
+    animation: drop 500ms ease 1 forwards;
 }
 .appointment_box::-webkit-scrollbar{
     background: none;
@@ -352,4 +371,12 @@ body.dark .booking_buttons:hover{
 #clearAppointment:hover{
     background-color: red;
     color:white;
+}
+@keyframes drop {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 500px;
+    }
 }

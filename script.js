@@ -83,6 +83,13 @@ checkAppointments?.addEventListener("click", () => {
     });
   });
 });
+let updatesHTML = '';
+const updateBell = document.getElementById('notification_bell');
+updateBell.addEventListener('click', ()=>{
+  updatesHTML = `<div class = "updates-js-window">
+   </div>`
+   document.getElementById('updateWindow').innerHTML = updatesHTML;
+});
 document.addEventListener("click", function (e) {
   const modal = document.querySelector(".appointment_box");
   if (
@@ -92,7 +99,16 @@ document.addEventListener("click", function (e) {
   ) {
     modal.remove();
   }
+ const updateModal = document.querySelector(".updates-js-window");
+  if (
+    updateModal &&
+    !updateModal.contains(e.target) &&
+    e.target.id !== "notification_bell"
+  ) {
+    updateModal.remove();
+  }
 });
+
 
 
 
