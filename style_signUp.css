@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.background_of_page{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg_image{
+    height: 100vh;
+    width: 100vw;
+}
+.interface{
+    height: 60%;
+    width: 30%;
+    background:none;
+    border: 1px solid rgb(255, 255, 255);
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    box-shadow: 0 0 4px;
+    text-align: center;
+}
+#loginDivision{
+    margin-top: 50px;
+}
+.heading{
+    color: rgb(0, 96, 15);
+    margin-top: 20px;
+}
+.login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.login_form input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.087);
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+.login_form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login_form button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(31, 143, 48);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login_form button:hover {
+    background-color: rgb(1, 104, 16);
+}
+
+.login_form p {
+    color: white;
+    font-size: 14px;
+}
+
+.login_form a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.login_form a:hover {
+    text-decoration: underline;
+}

@@ -22,9 +22,9 @@ specialtisation.forEach((grid) => {
                 <div class="text_in_grid">
                 <br>
                 <h2>${grid.title}</h2>
-                <a href="book_appointmet_offline/index.html">
+                <a href="index_offline-Appointment.html">
                 <button class = "booking_buttons">Book Offline Appointment</button></a>
-                <a href ="apply_for_online_prescription/index.html">
+                <a href ="index_online-Prescription.html">
                  <button class = "booking_buttons">Get Online Prescription</button></a>
                 </div>
                 </div>
@@ -83,13 +83,51 @@ checkAppointments?.addEventListener("click", () => {
     });
   });
 });
-let updatesHTML = '';
-const updateBell = document.getElementById('notification_bell');
-updateBell.addEventListener('click', ()=>{
-  updatesHTML = `<div class = "updates-js-window">
-   </div>`
-   document.getElementById('updateWindow').innerHTML = updatesHTML;
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+let updateBell = document.getElementById("notification_bell");
+
+if (updateBell) {
+  updateBell.addEventListener("click", () => {
+    let updatesHTML = '';
+    let dateNow = new Date();
+
+    const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+    let found = false;
+
+    appointments.forEach((data) => {
+      if (!data.bookingTime) return;
+
+      const bookingTime = new Date(data.bookingTime);
+      const timeDiff = bookingTime.getTime() - dateNow.getTime();
+
+      if (timeDiff <= 2 * 60 * 60 * 1000 && timeDiff >= 0) {
+        found = true;
+        updatesHTML += `
+          <div class="updates-js-window">
+            <p>🔔 You have an appointment in 2 hours!</p>
+            <p><strong>${data.name}</strong> | ${data.issue}</p>
+            <p>📅 At: ${bookingTime.toLocaleString()}</p>
+          </div>
+        `;
+      }
+    });
+
+    if (!found) {
+      updatesHTML = `
+        <div class="updates-js-window">
+          <p>❌ NO DATA FOUND</p>
+        </div>
+      `;
+    }
+    document.getElementById("updateWindow").innerHTML = updatesHTML;
+  });
+}
 });
+
+ 
 document.addEventListener("click", function (e) {
   const modal = document.querySelector(".appointment_box");
   if (
@@ -108,6 +146,17 @@ document.addEventListener("click", function (e) {
     updateModal.remove();
   }
 });
+
+ document.addEventListener("DOMContentLoaded", () => {
+    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+    if (isLoggedIn) {
+      const loginBtn = document.querySelector(".login_button");
+      if (loginBtn) {
+        loginBtn.style.display = "none";
+      }
+    }
+  });
 
 
 

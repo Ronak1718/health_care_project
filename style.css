@@ -152,7 +152,7 @@ button{
     background: none;
     border: none;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
 }
 input::placeholder{
     font-style: italic;
@@ -160,7 +160,7 @@ input::placeholder{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #notification_bell:hover{
-    animation: ring 0.25s  normal 2 ;
+    animation: ring 1ms  normal 2 ;
 }
 @keyframes ring {
     0%{
@@ -184,7 +184,7 @@ input::placeholder{
     display: grid;
     place-items: center;
     color: white;
-    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px ;
 }
 #welcome {
   font-size: 40px;
