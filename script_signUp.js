@@ -24,3 +24,16 @@ function signupUser() {
   showLogin(); 
   return false;
 }
+const userForm = document.getElementById('signupForm');
+
+  userForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const userData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value
+    };
+
+    localStorage.setItem("signUpData", JSON.stringify(userData));
+
+  });
